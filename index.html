@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="main-menu" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aim game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </head>
+  <body>
+    <div class="no-mobile">
+      <h1>Sorry, but this project not yet available on mobile devices :(</h1>
+    </div>
+    <h1 class="title">Aim game!</h1>
+    <nav class="buttons">
+      <button class="start" data-button="game"><i class="fa-solid fa-play"></i></button>
+      <button class="profile" data-button="profile"><i class="fa-solid fa-user"></i></button>
+      <button class="links" data-button="links"><i class="fa-solid fa-link"></i></button>
+      <button class="settings" data-button="settings"><i class="fa-solid fa-gear"></i></button>
+    </nav>
+    <section class="mode">
+      <h1 class="mode__title">Choose a game mode</h1>
+      <div class="mode__modes">
+        <button class="mode__default" data-game="default">Default</button>
+        <button class="mode__reflex" data-game="reflex">Reflex</button>
+        <button class="mode__tracking" data-game="tracking">Tracking</button>
+        <button class="mode__growing" data-game="growing">Growing (Beta)</button>
+        <button class="mode__back" data-button="main-menu"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+      </div>
+    </section>
+    <section class="profile"></section>
+    <section class="links">
+      <button class="discord"><i class="fa-brands fa-discord"></i></button>
+      <button class="github"><a href="https://github.com/jetfrog4/aim.js"><i class="fa-brands fa-github"></i></a></button>
+      <button class="back" data-button="main-menu"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+    </section>
+    <section class="settings"></section>
+    <div class="field"></div>
+    <script src="app.min.js"></script>
+  </body>
+</html>

@@ -13,4 +13,220 @@
 
 /* MAIN STYLES */
 
+.no-mobile {
+	width: 100vw;
+	height: 100vh;
+	background-color: #404040;
+	position: absolute;
+	z-index: 500;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 3vw;
+	color: white;
+	text-align: center;
+	@media (min-width: 769px) {
+		display: none;
+	}
+}
+
+body {
+	max-width: 100vw;
+	overflow-x: hidden;
+	background: rgb(114, 118, 119);
+	background: linear-gradient(
+		135deg,
+		rgba(114, 118, 119, 1) 0%,
+		rgba(105, 105, 143, 1) 36%,
+		rgba(101, 101, 152, 1) 75%,
+		rgba(73, 73, 108, 1) 100%
+	);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	row-gap: 150px;
+	align-items: center;
+	flex-direction: column;
+	font-family: "Roboto";
+}
+
+html::-webkit-scrollbar {
+	display: none;
+}
+
+.title {
+	display: none;
+	.main-menu & {
+		display: block;
+	}
+	top: 15vh;
+	font-size: 3.5rem;
+	color: white;
+	user-select: none;
+	text-align: center;
+}
+
+button {
+	background: none;
+	font-size: 48px;
+	color: white;
+	transition: color 350ms, transform 350ms;
+	&:hover {
+		color: rgb(13, 240, 240);
+		transform: scale(1.2);
+	}
+	&:active {
+		transform: scale(0.9);
+		transition: color 350ms, transform 0ms;
+	}
+	&::before {
+		position: absolute;
+		font-size: 16px;
+		opacity: 0;
+		top: 0;
+		transition: opacity 350ms, top 350ms;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	&:hover {
+		&::before {
+			opacity: 1;
+			top: -40%;
+		}
+	}
+}
+
+.buttons {
+	display: none;
+	.main-menu & {
+		display: flex;
+	}
+	column-gap: 50px;
+
+	.start {
+		&::before {
+			content: "Start";
+		}
+	}
+
+	.profile {
+		&::before {
+			content: "Profile";
+		}
+	}
+
+	.links {
+		&::before {
+			content: "Links";
+		}
+	}
+
+	.settings {
+		&::before {
+			content: "Settings";
+		}
+	}
+}
+
+section {
+	display: none;
+}
+
+.mode {
+	.game & {
+		display: flex;
+		flex-direction: column;
+	}
+	text-align: center;
+	row-gap: 50px;
+	&__title {
+		font-size: 3rem;
+		color: white;
+	}
+	&__modes {
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+	}
+	button {
+		font-size: 2rem;
+		&:nth-last-child(2) {
+			margin: 0 0 25px 0;
+		}
+	}
+}
+
+.field {
+	display: none;
+}
+
+section.profile {
+	.profile & {
+		display: flex;
+	}
+}
+
+section.links {
+	.links & {
+		display: flex;
+	}
+	column-gap: 70px;
+	.discord {
+		&::before {
+			content: "Discord";
+		}
+	}
+	.github {
+		&::before {
+			content: "GitHub";
+		}
+		a {
+			color: white;
+			transition: color 350ms;
+			&:hover {
+				color: rgb(13, 240, 240);
+			}
+		}
+	}
+	.back {
+		&::before {
+			content: "Back";
+		}
+	}
+}
+
+section.settings {
+	.settings & {
+		display: flex;
+	}
+}
+
+.hidden {
+	display: none;
+}
+
+.popup {
+	position: absolute;
+	display: block;
+	background: rgb(77, 230, 77);
+	bottom: 0%;
+	padding: 30px;
+	border-radius: 20px;
+	user-select: none;
+	transition: transform 500ms ease;
+	transform: translateY(100%);
+	&._active {
+		transform: translateY(-100%);
+	}
+}
+@keyframes line {
+	0% {
+		width: 0;
+	}
+	100% {
+		width: 100%;
+	}
+}
+
 // ============================================================================================= //

@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en").main-menu
 	head
 		meta(charset="UTF-8")
 		meta(name="format-detection" content="telephone=no")
@@ -7,6 +7,30 @@ html(lang="en")
 		title Aim game
 		link(rel="stylesheet", href="styles.css")
 		link(rel="shortcut icon", href="favicon.png")
+		link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer")
 	body
+		.no-mobile
+			h1 Sorry, but this project not yet available on mobile devices :(
 		h1.title Aim game!
+		nav.buttons
+			button.start(data-button="game") #[i(class="fa-solid fa-play")]
+			button.profile(data-button="profile") #[i(class="fa-solid fa-user")]
+			button.links(data-button="links") #[i(class="fa-solid fa-link")]
+			button.settings(data-button="settings") #[i(class="fa-solid fa-gear")]
+		section.mode
+			h1.mode__title Choose a game mode
+			.mode__modes
+				button(data-game="default").mode__default Default
+				button(data-game="reflex").mode__reflex Reflex
+				button(data-game="tracking").mode__tracking Tracking
+				button(data-game="growing").mode__growing Growing (Beta)
+				button(data-button="main-menu").mode__back #[i(class="fa-solid fa-arrow-right-from-bracket")]
+		section.profile
+		section.links
+			button.discord #[i(class="fa-brands fa-discord")]
+			button.github
+				a(href="https://github.com/jetfrog4/aim.js") #[i(class="fa-brands fa-github")]
+			button.back(data-button="main-menu") #[i(class="fa-solid fa-arrow-right-from-bracket")]
+		section.settings
+		.field
 		script(src="app.min.js")
