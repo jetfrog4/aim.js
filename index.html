@@ -13,22 +13,37 @@
     <div class="no-mobile">
       <h1>Sorry, but this project not yet available on mobile devices :(</h1>
     </div>
-    <h1 class="title">Aim game!</h1>
-    <nav class="buttons">
-      <button class="start" data-button="game"><i class="fa-solid fa-play"></i></button>
-      <button class="profile" data-button="profile"><i class="fa-solid fa-user"></i></button>
-      <button class="links" data-button="links"><i class="fa-solid fa-link"></i></button>
-      <button class="settings" data-button="settings"><i class="fa-solid fa-gear"></i></button>
-    </nav>
+    <section class="main-menu">
+      <h1 class="main-menu__title">Aim game!</h1>
+      <nav class="main-menu__navigation">
+        <button class="start" data-button="mode"><i class="fa-solid fa-play"></i></button>
+        <button class="profile" data-button="profile"><i class="fa-solid fa-user"></i></button>
+        <button class="links" data-button="links"><i class="fa-solid fa-link"></i></button>
+        <button class="settings" data-button="settings"><i class="fa-solid fa-gear"></i></button>
+      </nav>
+    </section>
     <section class="mode">
       <h1 class="mode__title">Choose a game mode</h1>
       <div class="mode__modes">
-        <button class="mode__default" data-game="default">Default</button>
-        <button class="mode__reflex" data-game="reflex">Reflex</button>
-        <button class="mode__tracking" data-game="tracking">Tracking</button>
-        <button class="mode__growing" data-game="growing">Growing (Beta)</button>
+        <button class="mode__default" data-mode="default" data-button="game">Default</button>
+        <button class="mode__reflex" data-mode="reflex" data-button="game">Reflex</button>
+        <button class="mode__tracking" data-mode="tracking" data-button="game">Tracking</button>
+        <button class="mode__growing" data-mode="growing" data-button="game">Growing (Beta)</button>
         <button class="mode__back" data-button="main-menu"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
       </div>
+    </section>
+    <section class="game">
+      <div class="game__info">
+        <div class="game__score">Score: 0</div>
+        <div class="game__time">Time: 0</div>
+      </div>
+      <div class="game__field"></div>
+    </section>
+    <section class="over">
+      <div class="over__oops">Oops, you lost. Try again ?</div>
+      <div class="over__score">Your score was: 0</div>
+      <button class="over__again" data-button="mode"> <i class="fa-solid fa-rotate-right"></i></button>
+      <button class="over__back" data-button="main-menu"><i class="fa-solid fa-arrow-right-from-bracket"></i></button>
     </section>
     <section class="profile"></section>
     <section class="links">

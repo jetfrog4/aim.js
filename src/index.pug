@@ -11,20 +11,36 @@ html(lang="en").main-menu
 	body
 		.no-mobile
 			h1 Sorry, but this project not yet available on mobile devices :(
-		h1.title Aim game!
-		nav.buttons
-			button.start(data-button="game") #[i(class="fa-solid fa-play")]
-			button.profile(data-button="profile") #[i(class="fa-solid fa-user")]
-			button.links(data-button="links") #[i(class="fa-solid fa-link")]
-			button.settings(data-button="settings") #[i(class="fa-solid fa-gear")]
+		section.main-menu
+			h1.main-menu__title Aim game!
+			nav.main-menu__navigation
+				button.start(data-button="mode") #[i(class="fa-solid fa-play")]
+				button.profile(data-button="profile") #[i(class="fa-solid fa-user")]
+				button.links(data-button="links") #[i(class="fa-solid fa-link")]
+				button.settings(data-button="settings") #[i(class="fa-solid fa-gear")]
+		
+		//- h1.title-score Your score: 0
+		//- h1.title-over #[button Try again ? #[i(class="fa-solid fa-rotate-right")]]
+		//- h3.time
+		//- button(data-button="main-menu").button-over #[i(class="fa-solid fa-arrow-right-from-bracket")]
 		section.mode
 			h1.mode__title Choose a game mode
 			.mode__modes
-				button(data-game="default").mode__default Default
-				button(data-game="reflex").mode__reflex Reflex
-				button(data-game="tracking").mode__tracking Tracking
-				button(data-game="growing").mode__growing Growing (Beta)
+				button(data-mode="default" data-button="game").mode__default Default
+				button(data-mode="reflex" data-button="game").mode__reflex Reflex
+				button(data-mode="tracking" data-button="game").mode__tracking Tracking
+				button(data-mode="growing" data-button="game").mode__growing Growing (Beta)
 				button(data-button="main-menu").mode__back #[i(class="fa-solid fa-arrow-right-from-bracket")]
+		section.game
+			.game__info
+				.game__score Score: 0
+				.game__time Time: 0
+			.game__field
+		section.over
+			.over__oops Oops, you lost. Try again ?
+			.over__score Your score was: 0
+			button(data-button="mode").over__again  #[i(class="fa-solid fa-rotate-right")]
+			button(data-button="main-menu").over__back #[i(class="fa-solid fa-arrow-right-from-bracket")]
 		section.profile
 		section.links
 			button.discord #[i(class="fa-brands fa-discord")]
@@ -33,4 +49,19 @@ html(lang="en").main-menu
 			button.back(data-button="main-menu") #[i(class="fa-solid fa-arrow-right-from-bracket")]
 		section.settings
 		.field
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 		script(src="app.min.js")
